@@ -1,0 +1,28 @@
+#banner {
+    background: #FAF5E5;
+    width: 100vw;
+    font-size: 1.5em;
+    padding: .5em;
+}
+
+#header {
+    text-align: center;
+    margin-right: 10em;
+}
+
+@media (max-width: 768px) {
+    #banner {
+
+    }
+
+    #header {
+        text-align: center;
+        margin-right: 0em;
+    }
+}
+
+@media (min-width: 769px) {
+    #banner {
+
+    }
+}

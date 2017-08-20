@@ -1,0 +1,29 @@
+#about-page {
+    align-content: center;
+}
+
+#about-me {
+    margin-left: 25%;
+    margin-right: 25%;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    margin-top: 2em;
+}
+
+#message {
+    background-color: #FAF5E5;
+    text-align: left;
+    padding: 2em;
+}
+
+@media (max-width: 768px) {
+    #about-page {
+
+    }
+}
+
+@media (min-width: 769px) {
+    #about-page {
+        padding-top: 8em;
+    }
+}
