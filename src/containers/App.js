@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import {
   BrowserRouter as Router,
   Route,
-  Link
+  Link,
+  Switch
 } from 'react-router-dom'
 import 'containers/App.css';
 
@@ -10,6 +11,13 @@ import 'containers/App.css';
 import Home from 'containers/Home';
 import About from 'containers/About';
 import Projects from 'containers/Projects';
+
+function NotFound(props) {
+  return (
+    <div className="page-container">
+    </div>
+  )
+}
 
 export default class App extends Component {
   
@@ -24,8 +32,9 @@ export default class App extends Component {
       <Router>
         <div id="App">
           <Route exact path="/" component={Home} />
-          <Route exact path="/about" component={About} />
-          <Route exact path="/projects" component={Projects} />
+          <Route path="/about" component={About} />
+          <Route path="/projects" component={Projects} />
+          <Route component={NotFound} />
         </div>
       </Router>
     );
