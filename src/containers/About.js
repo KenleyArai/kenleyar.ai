@@ -4,9 +4,11 @@ import Navbar from "components/Navbar";
 import Banner from "components/Banner";
 import "containers/about.css";
 
-import meImage from 'images/me.png';
-import lenaImage from 'images/lena.png';
-import inuImage from 'images/inu.png'
+import AboutMeBox from "components/AboutMeBox";
+
+import meImage from 'images/me.svg';
+import lenaImage from 'images/lena.svg';
+import inuImage from 'images/inu.svg'
 
 export default class About extends React.Component {
     render() {
@@ -17,9 +19,9 @@ export default class About extends React.Component {
                 <Banner header={"Who am I?"} />
                 <div id="about-me">
                     <div id="message"> 
-                        <img src={meImage} />
-                        <img src={lenaImage} />
-                        <img src={inuImage} />
+                        <AboutMeBox src={meImage} title={'The Boy'} />
+                        <AboutMeBox src={lenaImage} title={'The Girl'} />
+                        <AboutMeBox src={inuImage} title={'The Mastermind'} />
                     </div>
                 </div>
             </div>

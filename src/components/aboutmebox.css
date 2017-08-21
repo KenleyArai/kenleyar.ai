@@ -1,0 +1,26 @@
+#aboutmebox {
+}
+
+.aboutmebox-img {
+    width: 10em;
+    height: 10em;
+}
+
+.aboutmebox-title {
+    color: #FAF5E5;
+    font-family: 'Permanent Marker', cursive;
+    margin-top: -2em;
+    margin-left: 1em;
+    padding-bottom: 2em;
+}
+
+@media (max-width: 768px) {
+    #aboutmebox {
+
+    }
+}
+
+@media (min-width: 769px) {
+    #aboutmebox {
+    }
+}
