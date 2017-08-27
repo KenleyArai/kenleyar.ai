@@ -5,34 +5,48 @@
     line-height: 1.5;
 }
 
-.aboutmebox-img {
-    width: 13em;
-    height: 13em;
-}
 
-.aboutmebox-title {
-    color: #FAF5E5;
-    font-family: 'Permanent Marker', cursive;
-    margin-top: -2em;
-    margin-left: 1em;
-    padding-bottom: 2em;
-}
 
 .aboutmebox-msg {
     padding: 1em;
+    font-size: .75em;
 }
 
 @media (max-width: 768px) {
     #aboutmebox {
+        clear: left;
 
     }
 
-    .aboutmebox-msg {
-        display: none;
+    .aboutmebox-img {
+        width: 5em;
+        height: 5em;
+    }
+
+    .aboutmebox-title {
+        color: #FAF5E5;
+        font-size: .5em;
+        font-family: 'Permanent Marker', cursive;
+        margin-top: -2em;
+        margin-left: 1em;
+        padding-bottom: 2em;
     }
 }
 
 @media (min-width: 769px) {
     #aboutmebox {
+    }
+
+    .aboutmebox-img {
+        width: 13em;
+        height: 13em;
+    }
+
+    .aboutmebox-title {
+        color: #FAF5E5;
+        font-family: 'Permanent Marker', cursive;
+        margin-top: -2em;
+        margin-left: 1em;
+        padding-bottom: 2em;
     }
 }
