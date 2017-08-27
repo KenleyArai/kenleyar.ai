@@ -5,15 +5,15 @@
     line-height: 1.5;
 }
 
-.aboutmebox-msg {
-    padding: 1em;
-    background-color: #FAF5E5;
-    font-size: .75em;
-}
-
 @media (max-width: 768px) {
     #aboutmebox {
         clear: left;
+    }
+
+    .aboutmebox-msg {
+        padding: 1em;
+        background-color: #FAF5E5;
+        font-size: .75em;
     }
 
     .aboutmebox-img {
@@ -33,6 +33,13 @@
 
 @media (min-width: 769px) {
     #aboutmebox {
+
+    }
+
+    .aboutmebox-msg {
+        padding: 1em;
+        background-color: #FAF5E5;
+        font-size: 1em;
     }
 
     .aboutmebox-img {
