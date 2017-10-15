@@ -1,6 +1,9 @@
 #aboutmebox {
+    display:-webkit-box;
+    display:-ms-flexbox;
     display:flex;
-    justify-content: space-around;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
     padding-top: 1em;
     line-height: 1.5;
 }

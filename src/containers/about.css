@@ -1,5 +1,6 @@
 #about-page {
-    align-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
 }
 
 #about-me {
