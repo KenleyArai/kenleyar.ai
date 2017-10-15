@@ -63,3 +63,17 @@ body {
 	flex-grow: 1;
 	min-width: 100%;
   }
+
+* {
+	font-family: 'Permanent Marker', cursive;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+}
+
+input, button, submit { outline:none; border:none; } 
+input:focus, button:focus, submit:focus { outline:none; border:none; } 
