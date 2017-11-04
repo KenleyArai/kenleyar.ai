@@ -5,9 +5,6 @@ import Banner from "components/Banner";
 import GalleryApp from "containers/GalleryApp";
 import "containers/projects.css";
 
-import weddingImg from "images/wedding-icon.png";
-import roboCarImg from "images/robocar-icon.png";
-
 export default class About extends React.Component {
     render() {
         return (
