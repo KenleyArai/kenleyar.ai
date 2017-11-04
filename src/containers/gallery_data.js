@@ -9,11 +9,16 @@ let mock_state = {
             title: 'cdc',
             project_dir: 'cdc',
             placeholder: require('images/placeholder.png')
-        },
-        {
+        }, {
             key: 1,
             title: 'robocar',
             project_dir: 'robocar',
+            placeholder: require('images/placeholder.png')
+        }, {
+            key: 2,
+            title: 'My Wedding',
+            project_dir: 'wedding',
+            url: 'https://lena.kenleyar.ai',
             placeholder: require('images/placeholder.png')
         }
     ],

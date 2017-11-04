@@ -47,9 +47,8 @@ class GalleryApp extends Component {
 
     create_cards(projects, screen_type) {
         return projects.map((project) => ({
-            key: project.key,
-            title: project.title,
-            img_url: this.state.baseAddress + screen_type + '/' + project.project_dir + '/header.jpg'
+            img_url: this.state.baseAddress + screen_type + '/' + project.project_dir + '/header.jpg',
+            ...project
         }))
     }
 
