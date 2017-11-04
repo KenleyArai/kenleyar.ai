@@ -94,11 +94,37 @@ const CardTitle = styled.div `
     `}
 `;
 
-const Card = ({title, img_url, placeholder, clickHandler}) => (
+const ProjectCard = ({title, img_url, placeholder, url}) => (
+    <a href={url}>
+        <CardContainer>
+            <StyledProgressiveImage src={img_url} placeholder={placeholder}/>
+            <CardTitle>{title}</CardTitle>
+        </CardContainer>
+    </a>
+)
+
+const SlideshowCard = ({title, img_url, placeholder, clickHandler}) => (
     <CardContainer onClick={() => clickHandler(title)}>
         <StyledProgressiveImage src={img_url} placeholder={placeholder}/>
         <CardTitle>{title}</CardTitle>
     </CardContainer>
 )
+
+function card_helper(title, img_url, placeholder, clickHandler, url) {
+    if (url) {
+        return <ProjectCard
+            title={title}
+            img_url={img_url}
+            placeholder={placeholder}
+            url={url}/>
+    }
+    return <SlideshowCard
+        title={title}
+        clickHandler={clickHandler}
+        img_url={img_url}
+        placeholder={placeholder}/>
+}
+
+const Card = ({title, img_url, placeholder, clickHandler, url}) => (card_helper(title, img_url, placeholder, clickHandler, url))
 
 export default Card;
