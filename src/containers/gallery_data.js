@@ -1,39 +1,36 @@
-let mock_state = {
-    title: 'gallery',
-    current_state: 'gallery',
-    baseAddress: "https://kenley.nyc3.digitaloceanspaces.com/personal-website/",
-    placeholder: require('images/placeholder.png'),
-    gallery: [
-        {
-            key: 0,
-            title: 'cdc',
-            project_dir: 'cdc',
-            placeholder: require('images/placeholder.png')
-        }, {
-            key: 1,
-            title: 'robocar',
-            project_dir: 'robocar',
-            placeholder: require('images/placeholder.png')
-        }, {
-            key: 2,
-            title: 'My Wedding',
-            project_dir: 'wedding',
-            url: 'https://lena.kenleyar.ai',
-            placeholder: require('images/placeholder.png')
-        }
-    ],
-    cdc: {
-        title: 'cdc',
-        project_dir: 'cdc',
-        length: 19,
-        placeholder: require('images/placeholder.png')
-    },
-    robocar: {
-        title: 'robocar',
-        project_dir: 'robocar',
-        length: 10,
-        placeholder: require('images/placeholder.png')
-    }
-}
+var robocar_payload = {
+  title: "Robocar",
+  desc: "Remote control car",
+  url: "https://kenley.nyc3.digitaloceanspaces.com/images/robocar/",
+  count: 9
+};
 
-export default mock_state;
+var sensor_payload = {
+  title: "Mosquito Classifier",
+  desc: "My trip at the cdc",
+  url: "https://kenley.nyc3.digitaloceanspaces.com/images/sensor/",
+  count: 28
+};
+
+var wedding_payload = {
+  title: "Wedding website",
+  desc: "Ruby on rails 5 api",
+  link: "http://lena.kenleyar.ai/",
+  url: "https://kenley.nyc3.digitaloceanspaces.com/images/wedding/0.jpg"
+};
+
+var serial_payload = {
+  title: "Serial Face",
+  desc: "box that unlocks using image processing",
+  link: "http://lena.kenleyar.ai/",
+  url: "https://kenley.nyc3.digitaloceanspaces.com/images/serial-face/0.jpg"
+};
+
+var album_payloads = [
+  robocar_payload,
+  sensor_payload,
+  wedding_payload,
+  serial_payload
+];
+
+export default album_payloads;
