@@ -1,29 +1,26 @@
 #about-page {
-    -ms-flex-line-pack: center;
-        align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
 }
 
 #about-me {
-    margin-left: 20%;
-    margin-right: 20%;
-    text-align: center;
-    font-family: 'Open Sans', sans-serif;
-    margin-top: 2em;
+  width: 80vw;
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  margin-top: 2em;
 }
 
 #message {
-    text-align: left;
-    padding: 2em;
+  text-align: left;
 }
 
 @media (max-width: 768px) {
-    #about-page {
-
-    }
+  #about-page {
+  }
 }
 
 @media (min-width: 769px) {
-    #about-page {
-        padding-top: 8em;
-    }
+  #about-page {
+    padding-top: 8em;
+  }
 }
