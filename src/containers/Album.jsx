@@ -6,6 +6,7 @@ import AlbumCard from "components/AlbumCard";
 import Topbar from "components/Topbar";
 import Gallery from "containers/Gallery";
 import Loading from "components/Loading";
+import Bar from "components/Bar";
 
 import uuidv4 from "uuid/v4";
 
@@ -18,7 +19,16 @@ const AlbumContainer = styled.div`
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 `;
 
-const AlbumHeader = styled.div``;
+const AlbumHeader = styled.div`
+  font-size: 3rem;
+`;
+
+const AlbumBar = Bar.extend`
+  box-shadow: unset;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+`;
 
 export default class Album extends PureComponent {
   static propTypes = {
@@ -66,7 +76,9 @@ export default class Album extends PureComponent {
     if (state_name == "All") {
       return (
         <AlbumContainer>
-          <AlbumHeader>{this.state.title}</AlbumHeader>
+          <AlbumBar>
+            <AlbumHeader>{this.state.title}</AlbumHeader>
+          </AlbumBar>
           {galleries.map(gallery => (
             <AlbumCard
               key={uuidv4()}
@@ -79,7 +91,9 @@ export default class Album extends PureComponent {
     }
     return (
       <AlbumContainer>
-        <AlbumHeader>{this.state.title}</AlbumHeader>
+        <AlbumBar>
+          <AlbumHeader>{this.state.title}</AlbumHeader>
+        </AlbumBar>
         <Topbar clickHandler={this.backHandler} />
         <Gallery url={this.state.url} count={this.state.count} />
       </AlbumContainer>
