@@ -7,6 +7,7 @@ import Topbar from "components/Topbar";
 import Gallery from "containers/Gallery";
 import Loading from "components/Loading";
 import Bar from "components/Bar";
+import Masonry from "components/Masonry";
 
 import uuidv4 from "uuid/v4";
 
@@ -79,13 +80,15 @@ export default class Album extends PureComponent {
           <AlbumBar>
             <AlbumHeader>{this.state.title}</AlbumHeader>
           </AlbumBar>
-          {galleries.map(gallery => (
-            <AlbumCard
-              key={uuidv4()}
-              clickHandler={this.clickHandler}
-              {...gallery}
-            />
-          ))}
+          <Masonry>
+            {galleries.map(gallery => (
+              <AlbumCard
+                key={uuidv4()}
+                clickHandler={this.clickHandler}
+                {...gallery}
+              />
+            ))}
+          </Masonry>
         </AlbumContainer>
       );
     }

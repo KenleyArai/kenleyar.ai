@@ -5,15 +5,21 @@ import styled from "styled-components";
 import Button from "components/Button";
 
 const Card = styled.div`
+  background-color: #faf5e5;
   border-radius: 2px;
   transition: all 400ms cubic-bezier(0.165, 0.84, 0.44, 1);
-  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.3), 0 2px 2px 0 rgba(0, 0, 0, 0.2);
-  width: 16rem;
+  width: auto
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  margin: .5rem;
+  &:hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  }
 `;
 
 const CardPhoto = styled.img`
-  width: 16rem;
-  height: auto;
+  width: auto;
+  height: 16rem;
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 `;
 
