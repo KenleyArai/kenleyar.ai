@@ -23,11 +23,19 @@ const CardPhoto = styled.img`
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 `;
 
-const CardTitle = styled.div``;
+const CardTitle = styled.div`
+  font-size: 1.5rem;
+  padding: 0.5rem;
+`;
 
-const CardDesc = styled.div``;
+const CardDesc = styled.div`
+  font-size: 0.75rem;
+  padding: 0.5rem;
+`;
 
-const CardButton = Button.extend``;
+const CardButton = Button.extend`
+  margin: 0.5rem;
+`;
 
 const CardLink = styled.a`
   display: inline-block;
@@ -37,8 +45,9 @@ const CardLink = styled.a`
   border-radius: 2px;
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.3), 0 2px 2px 0 rgba(0, 0, 0, 0.2);
-
+  margin: 0.5rem;
   &:hover {
+    text-shadow: 1px 1px 2px black;
     box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.3),
       0 14px 12px 0 rgba(0, 0, 0, 0.17);
   }
