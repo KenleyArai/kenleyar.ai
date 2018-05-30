@@ -3,18 +3,16 @@
     width: 100vw;
     font-size: 1.5em;
     padding: .5em;
+    margin-bottom: .5em;
 }
 
 #header {
     text-align: center;
-    margin-right: 10em;
+    margin-top: 2em;
 }
 
 @media (max-width: 768px) {
-    #banner {
-
-    }
-
+    #banner {}
     #header {
         text-align: center;
         margin-right: 0em;
@@ -22,7 +20,5 @@
 }
 
 @media (min-width: 769px) {
-    #banner {
-
-    }
+    #banner {}
 }
