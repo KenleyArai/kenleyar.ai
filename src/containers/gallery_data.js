@@ -21,9 +21,16 @@ var wedding_album1_payload = {
 
 var wedding_album2_payload = {
   title: "Wedding Reception",
-  desc: "Time to party!.",
+  desc: "Time to party!",
   link: "https://photos.app.goo.gl/5574bhTegNIk5zMi1",
   url: "https://lh3.googleusercontent.com/IxJUg4pJ_TZoKiNYKWiN2dJ-pNgiRgXTc2yHa2NNlTFkb_R1vGVnHzxg79aGz5lBJ70wQPwZBm4LIRa2dBScKib8t566MLC4e3E2px7ED3BxAnbQ4eK5jtW7wCf8OGuh8LJagH28eA=w2400"
+};
+
+var inu_album = {
+  title: "Inu",
+  desc: "The monster!",
+  link: "https://photos.app.goo.gl/iatbAiv0mEMoheQf2",
+  url: "https://lh3.googleusercontent.com/NLSN6zqun9nJAijzerzHGh7ZZtAQvXS2_s1yD-wMmHziHuQxgGyFTAFaaiP0naVrwhveVYSc6ae_JxsIr4RdqfFYbFGvsOWioth7Ja3XCk22NcPrjt53KMnsUjfbqrvwZeyfdPjZQg=w2400"
 };
 
 var wedding_payload = {
@@ -42,7 +49,8 @@ var serial_payload = {
 
 const album_payload = {
   single_projects: [wedding_payload, serial_payload],
-  albums: [wedding_album1_payload, wedding_album2_payload, robocar_payload, sensor_payload]
+  albums: [robocar_payload, sensor_payload],
+  personal: [wedding_album1_payload, wedding_album2_payload, inu_album]
 };
 
 export default album_payload;

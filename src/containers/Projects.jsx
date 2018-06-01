@@ -26,35 +26,19 @@ export default class About extends React.Component {
 
   render() {
     if (!this.state._loaded) {
-      return <Loading / > ;
+      return <Loading/>;
     }
-
-    return ( <
-      div id = "projects-page" >
-      <
-      Navbar activePage = "projects" / >
-      <
-      Logo / >
-      <
-      Banner header = {
-        "This is where I keep photos of what I have done and what I have worked on!"
-      }
-      /> <
-      Album title = {
-        "Albums"
-      }
-      galleries = {
-        this.state.albums
-      }
-      /> <
-      Album title = {
-        "Projects"
-      }
-      galleries = {
-        this.state.single_projects
-      }
-      /> <
-      /div>
-    );
+    return (
+      <div id="projects-page">
+        < Navbar activePage="projects"/>
+        < Logo/>
+        <
+          Banner
+          header={"This is where I keep photos of what I have done and what I have worked on!"}/>
+        < Album title={"Albums"} galleries={this.state.albums}/>
+        < Album title={"Projects"} galleries={this.state.single_projects}/>
+        < Album title={"Google Albums"} galleries={this.state.personal}/>
+      </div>
+    )
   }
 }

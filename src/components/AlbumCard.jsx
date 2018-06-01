@@ -1,10 +1,10 @@
-import React, { Component } from "react";
+import React, {Component} from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 
 import Button from "components/Button";
 
-const Card = styled.div`
+const Card = styled.div `
   background-color: #faf5e5;
   border-radius: 2px;
   transition: all 400ms cubic-bezier(0.165, 0.84, 0.44, 1);
@@ -17,28 +17,28 @@ const Card = styled.div`
   }
 `;
 
-const CardPhoto = styled.img`
+const CardPhoto = styled.img `
   width: auto;
   height: 16rem;
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 `;
 
-const CardTitle = styled.div`
+const CardTitle = styled.div `
   font-size: 1.5rem;
   padding: 0.5rem;
 `;
 
-const CardDesc = styled.div`
+const CardDesc = styled.div `
   font-size: 0.75rem;
   max-width: 18rem;
   padding: 0.5rem;
 `;
 
-const CardButton = Button.extend`
+const CardButton = Button.extend `
   margin: 0.5rem;
 `;
 
-const CardLink = styled.a`
+const CardLink = styled.a `
   display: inline-block;
   padding: 0.5rem;
   align-text: center;
@@ -72,12 +72,21 @@ export default class AlbumCard extends Component {
   }
 
   render() {
-    var { url, link, desc, title, count, clickHandler } = { ...this.props };
+    var {
+      url,
+      link,
+      desc,
+      title,
+      count,
+      clickHandler
+    } = {
+      ...this.props
+    };
 
     if (count) {
       return (
         <Card>
-          <CardPhoto srcSet={this.get_temp_header(url)} />
+          <CardPhoto srcSet={this.get_temp_header(url)}/>
           <CardTitle>{title}</CardTitle>
           <CardDesc>{desc}</CardDesc>
           <CardButton onClick={() => clickHandler(url, count)}>
@@ -88,10 +97,10 @@ export default class AlbumCard extends Component {
     }
     return (
       <Card>
-        <CardPhoto srcSet={url} />
+        <CardPhoto srcSet={url}/>
         <CardTitle>{title}</CardTitle>
         <CardDesc>{desc}</CardDesc>
-        <CardLink href={link}>Go to Site</CardLink>
+        <CardLink target="_blank" href={link}>Go to Site</CardLink>
       </Card>
     );
   }
