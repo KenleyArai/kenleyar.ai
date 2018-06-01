@@ -35,8 +35,8 @@ export default class About extends React.Component {
         <
           Banner
           header={"This is where I keep photos of what I have done and what I have worked on!"}/>
-        < Album title={"Albums"} galleries={this.state.albums}/>
-        < Album title={"Projects"} galleries={this.state.single_projects}/>
+        < Album title={"Software"} galleries={this.state.single_projects}/>
+        < Album title={"Embedded"} galleries={this.state.albums}/>
         < Album title={"Google Albums"} galleries={this.state.personal}/>
       </div>
     )
