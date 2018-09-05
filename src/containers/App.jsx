@@ -1,37 +1,45 @@
-import React, {Component} from 'react';
-import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
-import 'containers/App.css';
+import React, { Component } from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
-// Importing pages
-import Home from 'containers/Home';
-import About from 'containers/About';
-import Projects from 'containers/Projects';
+import HomePage from 'pages/Home';
+import AboutPage from 'pages/About';
+import PortfolioPage from 'pages/Portfolio';
+import Navigation from 'components/Navigation';
+import NotFoundPage from 'pages/NotFound';
 
-function NotFound(props) {
-  return (
-    <div className="page-container"></div>
-  )
-}
+const pages = [
+  {
+    path: '/',
+    text: 'Home',
+    key: 0,
+  },
+  {
+    path: '/about',
+    text: 'About',
+    key: 1,
+  },
+  {
+    path: '/portfolio',
+    text: 'Portfolio',
+    key: 3,
+  },
+];
 
 export default class App extends Component {
-
-  constructor() {
-    super();
-
-    this.state = {
-      is_chewing: false
-    }
-  }
-
   render() {
     return (
       <Router>
         <div id="App">
+          <Route
+            render={({ location }) => (
+              <Navigation links={pages} location={location.pathname} />
+            )}
+          />
           <Switch>
-            <Route exact path="/" component={Home}/>
-            <Route path="/about" component={About}/>
-            <Route path="/projects" component={Projects}/>
-            <Route component={NotFound}/>
+            <Route exact path="/" component={HomePage} />
+            <Route exact path="/about" component={AboutPage} />
+            <Route exact path="/portfolio" component={PortfolioPage} />
+            <Route component={NotFoundPage} />
           </Switch>
         </div>
       </Router>

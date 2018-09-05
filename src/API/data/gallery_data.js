@@ -1,6 +1,6 @@
 var robocar_payload = {
   title: "Robocar",
-  desc: "This is a car Antonine and I made for a class at UCR. We ended up having a ton of fun creating and playing with it after we were finished.",
+  desc: "This is a car Antoine and I made for a class at UCR. We ended up having a ton of fun creating and playing with it after we were finished.",
   url: "https://kenley.nyc3.digitaloceanspaces.com/images/robocar/",
   count: 9
 };
