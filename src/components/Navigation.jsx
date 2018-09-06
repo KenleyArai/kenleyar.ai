@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 
 export default class Navigation extends Component {
   render() {
-    let { location, links } = { ...this.props };
-    console.log(location);
+    let { links } = { ...this.props };
+
     return (
       <ul>
         {links.map(link => {

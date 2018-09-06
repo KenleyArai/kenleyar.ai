@@ -17,6 +17,7 @@ class Portfolio extends Component {
     );
   }
 }
-const PortfolioPage = addAPICall(Portfolio, 'http://localhost:9000/projects');
+
+const PortfolioPage = addAPICall(Portfolio, 'http://localhost:9000/portfolio');
 
 export default PortfolioPage;
