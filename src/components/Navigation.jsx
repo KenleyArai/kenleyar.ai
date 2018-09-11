@@ -2,19 +2,26 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
 export default class Navigation extends Component {
+  clickHandler(path) {
+    let slider = document.getElementById("slider")
+    let pos = document.getElementById(path)
+  
+    slider.style.transform = "translateX("  + (pos.offsetLeft ) + "px)"
+  }
+
   render() {
     let { links } = { ...this.props };
-
     return (
-      <ul>
+      <nav>
         {links.map(link => {
           return (
-            <li key={link.key}>
-              <Link to={link.path}>{link.text}</Link>
-            </li>
+            <Link id={link.path} onClick={() => this.clickHandler(link.path)} key={link.key} to={link.path}>
+              {link.text}
+            </Link>
           );
         })}
-      </ul>
+        <div id="slider" />
+      </nav>
     );
   }
 }
