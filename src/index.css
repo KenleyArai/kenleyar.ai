@@ -14,7 +14,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 nav {
@@ -23,7 +23,7 @@ nav {
 }
 
 #slider {
-  transition: transform .25s; 
+  transition: transform 0.25s;
   position: relative;
   height: 10px;
   width: 100%;

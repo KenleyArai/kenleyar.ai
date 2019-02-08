@@ -7,7 +7,7 @@ class Home extends Component {
     return (
       <ul>
         <h1>Home Page</h1>
-        {data.posts.map(post => (
+        {data.map(post => (
           <li key={post.key}>
             <h2>{post.title}</h2> <p>{post.desc}</p>
           </li>
@@ -16,6 +16,10 @@ class Home extends Component {
     );
   }
 }
-const HomePage = addAPICall(Home, 'http://localhost:9000/');
+
+const HomePage = addAPICall(
+  Home,
+  'https://api.sheety.co/d16b86e9-bd73-4e11-8eb6-854fcde73d14'
+);
 
 export default HomePage;
