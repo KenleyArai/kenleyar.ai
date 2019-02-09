@@ -1,10 +1,11 @@
 import React from 'react';
 import Deck from 'components/Deck';
+import PageBanner from 'components/PageBanner';
 import addAPICall from 'HOC/addAPICall';
 
 const Home = ({ data }) => (
   <div className={'page'}>
-    <h2>Home Page</h2>
+    <PageBanner header={'Home Page'} />
     <Deck posts={data} />
   </div>
 );
