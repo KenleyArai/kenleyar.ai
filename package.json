@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "react": "^15.6.1",
-    "react-dom": "^15.6.1",
+    "react": "next",
+    "react-dom": "next",
     "react-image": "^1.4.1",
     "react-lazyload": "^2.3.0",
     "react-markdown-renderer": "^1.4.0",

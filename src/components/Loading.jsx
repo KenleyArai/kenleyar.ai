@@ -1,48 +1,37 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect } from 'react';
 
-class Loading extends Component {
-  constructor(props) {
-    super(props);
+function Loading() {
+  const [count, setCount] = useState(0);
 
-    this.state = { counter: null };
-
-    this.getPosition = this.getPosition.bind(this);
-    this.tick = this.tick.bind(this);
-
-    this.timer = setInterval(this.tick, 50);
+  function tick() {
+    setCount(count + 1);
   }
 
-  tick() {
-    this.setState({ counter: this.state.counter + 1 });
-  }
-
-  componentWillUnmount() {
-    clearInterval(this.timer);
-  }
-
-  componentDidMount() {
-    this.setState({ top: 0, left: 0 });
-  }
-
-  getPosition() {
+  function getPosition() {
     return {
-      'boxShadow':
-        Math.sin((3.14 * this.state.counter) / 16) * 30 +
+      boxShadow:
+        Math.sin((3.14 * count) / 16) * 30 +
         'px ' +
         '2px ' +
-        Math.cos((3.14 * this.state.counter) / 8) * 10 +
+        Math.cos((3.14 * count) / 8) * 10 +
         'px 20px #888888',
-      left: Math.sin((3.14 * this.state.counter) / 16) * 100 + 'px',
+      left: Math.sin((3.14 * count) / 16) * 100 + 'px',
     };
   }
 
-  render() {
-    return (
-      <div id="loader-container">
-        <div style={this.getPosition()} id="loader" />
-      </div>
-    );
-  }
+  useEffect(() => {
+    let timerID = setInterval(() => tick(), 1000);
+
+    return function cleanup() {
+      clearInterval(timerID);
+    };
+  });
+
+  return (
+    <div id="loader-container">
+      <div style={getPosition()} id="loader" />
+    </div>
+  );
 }
 
 export default Loading;
