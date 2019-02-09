@@ -1,7 +1,15 @@
 import React, { useState, useEffect } from 'react';
 
-function Loading() {
+const Loading = () => {
   const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    let timerID = setInterval(() => tick(), 1000);
+
+    return function cleanup() {
+      clearInterval(timerID);
+    };
+  });
 
   function tick() {
     setCount(count + 1);
@@ -19,19 +27,11 @@ function Loading() {
     };
   }
 
-  useEffect(() => {
-    let timerID = setInterval(() => tick(), 1000);
-
-    return function cleanup() {
-      clearInterval(timerID);
-    };
-  });
-
   return (
     <div id="loader-container">
       <div style={getPosition()} id="loader" />
     </div>
   );
-}
+};
 
 export default Loading;

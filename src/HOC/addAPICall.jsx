@@ -1,37 +1,22 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Loading from 'components/Loading';
 
 const addAPICall = (WrappedComponent, url) => {
-  class GET extends React.Component {
-    constructor(props) {
-      super(props);
+  const GET = () => {
+    const [is_loaded, setIsLoaded] = useState(false);
+    const [data, setData] = useState(null);
 
-      this.get = this.get.bind(this);
-
-      this.state = {
-        loaded: null,
-        data: null,
-      };
-    }
-
-    componentDidMount() {
-      this.get();
-    }
-
-    get() {
+    const get = () => {
       fetch(url)
         .then(response => response.json())
-        .then(data => this.setState({ data, loaded: true }));
-    }
+        .then(data => setData(data))
+        .then(() => setIsLoaded(true));
+    };
 
-    render() {
-      return this.state.loaded ? (
-        <WrappedComponent {...this.props} data={this.state.data} get={this.get} />
-      ) : (
-        <Loading />
-      );
-    }
-  }
+    useEffect(() => get());
+
+    return is_loaded ? <WrappedComponent data={data} get={get} /> : <Loading />;
+  };
 
   return GET;
 };

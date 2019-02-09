@@ -1,7 +1,7 @@
 import React from 'react';
 import ListCard from 'components/ListCard';
 
-export default function Deck({ posts }) {
+const Deck = ({ posts }) => {
   return (
     <ul className="deck">
       {posts.map(post => (
@@ -14,4 +14,6 @@ export default function Deck({ posts }) {
       ))}
     </ul>
   );
-}
+};
+
+export default Deck;

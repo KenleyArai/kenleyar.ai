@@ -1,5 +1,7 @@
 import React from 'react';
 
-export default function Banner({ header }) {
+const PageBanner = ({ header }) => {
   return <h2>{header}</h2>;
-}
+};
+
+export default PageBanner;
