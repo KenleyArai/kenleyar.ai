@@ -12,7 +12,7 @@ const Home = ({ data }) => (
 
 const HomePage = addAPICall(
   Home,
-  'https://api.sheety.co/57263d46-98a1-496d-8274-c912a4fed721'
+  'https://api.sheety.co/57263d46-98a1-496d-8274-c912a4fed7212'
 );
 
 export default HomePage;

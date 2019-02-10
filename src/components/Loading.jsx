@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-const Loading = () => {
+const Loading = ({ failed }) => {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
@@ -27,11 +27,19 @@ const Loading = () => {
     };
   }
 
-  return (
-    <div id="loader-container">
-      <div style={getPosition()} id="loader" />
-    </div>
-  );
+  if (failed === undefined || failed === null) {
+    return (
+      <div id="loader-container">
+        <div style={getPosition()} id="loader" />
+      </div>
+    );
+  } else if (failed) {
+    return (
+      <div id="loader-container">
+        <p>Could not load component</p>
+      </div>
+    );
+  }
 };
 
 export default Loading;
