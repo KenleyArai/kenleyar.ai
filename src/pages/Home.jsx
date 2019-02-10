@@ -1,7 +1,7 @@
 import React from 'react';
 import Deck from 'components/Deck';
 import PageBanner from 'components/PageBanner';
-import addAPICall from 'HOC/addAPICall';
+import addGETCall from 'HOC/addGETCall';
 
 const Home = ({ data }) => (
   <div className={'page'}>
@@ -10,9 +10,9 @@ const Home = ({ data }) => (
   </div>
 );
 
-const HomePage = addAPICall(
+const HomePage = addGETCall(
   Home,
-  'https://api.sheety.co/57263d46-98a1-496d-8274-c912a4fed7212'
+  'https://api.sheety.co/57263d46-98a1-496d-8274-c912a4fed721'
 );
 
 export default HomePage;
