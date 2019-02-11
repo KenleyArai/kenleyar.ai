@@ -2,12 +2,18 @@ import React from 'react';
 import Deck from 'components/Deck';
 import PageBanner from 'components/PageBanner';
 import addGETCall from 'HOC/addGETCall';
+import styled from 'styled-components';
+
+const Page = styled.div`
+  min-width: 65%;
+  max-width: 75%;
+`;
 
 const Home = ({ data }) => (
-  <div className={'page'}>
+  <Page>
     <PageBanner header={'Home Page'} />
     <Deck posts={data} />
-  </div>
+  </Page>
 );
 
 const HomePage = addGETCall(
