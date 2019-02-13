@@ -45,6 +45,15 @@ const identity = x => x;
 // left :: a -> Either a b
 const left = a => Left.of(a);
 
+// reduce :: (f -> Accumulator) -> Integer -> [a] -> Accumulator
+const reduce = curry((f, start, arr) => {
+  let acc = start;
+  for (let i = 0; i < arr.length; i++) {
+    acc = f(arr[i], acc);
+  }
+  return acc;
+});
+
 module.exports = {
   add,
   always,
@@ -58,4 +67,5 @@ module.exports = {
   forEach,
   identity,
   left,
+  reduce,
 };
