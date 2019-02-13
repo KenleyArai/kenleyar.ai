@@ -1,5 +1,5 @@
-import AppContainer from 'components/styled/AppContainer';
 import Navigation from 'components/Navigation';
+import AppContainer from 'components/styled/AppContainer';
 import HomePage from 'pages/Home';
 import NotFoundPage from 'pages/NotFound';
 import React, { Component } from 'react';
@@ -19,12 +19,14 @@ export default class App extends Component {
     return (
       <Router>
         <AppContainer>
+          {/* Adding the navigation menu */}
           <Route
             render={({ location }) => (
               <Navigation links={pages} location={location.pathname} />
             )}
           />
 
+          {/* Adding each route which resolves to a Page */}
           <Switch>
             <Route exact path="/" component={HomePage} />
             <Route component={NotFoundPage} />
