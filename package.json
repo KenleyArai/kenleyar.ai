@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "ramda": "^0.26.1",
     "react": "next",
     "react-dom": "next",
     "react-image": "^1.4.1",

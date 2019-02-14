@@ -45,6 +45,21 @@ const identity = x => x;
 // left :: a -> Either a b
 const left = a => Left.of(a);
 
+// map :: (a->b) -> [a] -> [b]
+const map = (fn, arr) => {
+  let result_arr = [];
+  if (arr) {
+    for (let i = 0; i < arr.length; i++) {
+      result_arr[i] = fn(arr[i]);
+    }
+  }
+
+  return result_arr;
+};
+
+// maybe :: b -> (a->b) -> Maybe a -> b
+const maybe = curry((v, f, m) => (m.is_nothing ? v : f(m.val)));
+
 // reduce :: (f -> Accumulator) -> Integer -> [a] -> Accumulator
 const reduce = curry((f, start, arr) => {
   let acc = start;
@@ -54,7 +69,7 @@ const reduce = curry((f, start, arr) => {
   return acc;
 });
 
-module.exports = {
+export {
   add,
   always,
   chain,
@@ -67,5 +82,7 @@ module.exports = {
   forEach,
   identity,
   left,
+  map,
+  maybe,
   reduce,
 };

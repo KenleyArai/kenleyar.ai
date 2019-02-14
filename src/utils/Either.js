@@ -44,4 +44,4 @@ class Right extends Either {
   }
 }
 
-module.exports = { Either, Left, Right };
+export { Either, Left, Right };
