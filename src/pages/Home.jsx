@@ -11,9 +11,6 @@ const Home = ({ data }) => (
   </PageContainer>
 );
 
-const HomePage = addGETCall(
-  Home,
-  'https://api.sheety.co/57263d46-98a1-496d-8274-c912a4fed721'
-);
+const HomePage = addGETCall(Home, 'http://localhost:5000/posts');
 
 export default HomePage;

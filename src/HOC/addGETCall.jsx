@@ -15,9 +15,9 @@ const addGETCall = (WrappedComponent, url) => {
           return response;
         })
         .then(response => response.json())
-        .then(json => setData(json))
+        .then(json => setData(JSON.parse(json)))
         .then(() => setIsLoaded(true))
-        .catch(error => setIsLoaded(false));
+        .catch(error => setIsLoaded(false) || setData(error));
     };
 
     useEffect(() => get(), []);
@@ -27,9 +27,10 @@ const addGETCall = (WrappedComponent, url) => {
       return <Loading />;
     } else if (is_loaded === false) {
       // We failed loading
-      return <Loading failed={true} />;
+      return <Loading failed={true} data={data} />;
     } else {
       // We loaded, so loaded the WrappedComponent
+      console.log(data);
       return <WrappedComponent data={data} />;
     }
   };
