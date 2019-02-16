@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSpring, animated } from 'react-spring';
 
-const Loading = ({ failed }) => {
+const Loading = ({ failed, data }) => {
   if (failed === undefined || failed === null) {
     const props = useSpring({
       opacity: 1,
@@ -16,7 +16,7 @@ const Loading = ({ failed }) => {
   } else if (failed) {
     return (
       <animated.div className="loader-container">
-        <div className="failed-load">Could not load component</div>
+        <div className="failed-load">{data}</div>
       </animated.div>
     );
   }

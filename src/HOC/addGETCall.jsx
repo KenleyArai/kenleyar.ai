@@ -17,7 +17,7 @@ const addGETCall = (WrappedComponent, url) => {
         .then(response => response.json())
         .then(json => setData(JSON.parse(json)))
         .then(() => setIsLoaded(true))
-        .catch(error => setIsLoaded(false) || setData(error));
+        .catch(error => setIsLoaded(false) || setData(error)); // Hack to set error data
     };
 
     useEffect(() => get(), []);
@@ -30,7 +30,6 @@ const addGETCall = (WrappedComponent, url) => {
       return <Loading failed={true} data={data} />;
     } else {
       // We loaded, so loaded the WrappedComponent
-      console.log(data);
       return <WrappedComponent data={data} />;
     }
   };
