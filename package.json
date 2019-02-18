@@ -2,6 +2,7 @@
   "name": "personal-app",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://kenleyar.ai",
   "dependencies": {
     "mdx.macro": "^0.2.8",
     "ramda": "^0.26.1",
