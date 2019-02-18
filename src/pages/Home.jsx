@@ -11,6 +11,6 @@ const Home = ({ data }) => (
   </PageContainer>
 );
 
-const HomePage = addGETCall(Home, 'http://localhost:5000/posts');
+const HomePage = addGETCall(Home)('http://localhost:5000/posts');
 
 export default HomePage;

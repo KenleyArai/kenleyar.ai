@@ -1,7 +1,8 @@
 import Loading from 'components/Loading';
 import React, { Component } from 'react';
+import { curry } from 'ramda';
 
-const addGETCall = (WrappedComponent, url) => {
+const addGETCall = curry((WrappedComponent, url) => {
   return class extends Component {
     constructor(props) {
       super(props);
@@ -28,10 +29,10 @@ const addGETCall = (WrappedComponent, url) => {
         .then(response => response.json())
         .then(json =>
           this.setState({ is_loaded: true, data: JSON.parse(json) })
-        )
-        .catch(error =>
-          this.setState({ is_loaded: false, data: JSON.parse(error) })
         );
+      //.catch(error =>
+      //  this.setState({ is_loaded: false, data: JSON.parse(error) })
+      //);
     }
 
     render() {
@@ -50,6 +51,6 @@ const addGETCall = (WrappedComponent, url) => {
       }
     }
   };
-};
+});
 
 export default addGETCall;
