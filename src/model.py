@@ -1,17 +1,13 @@
-from flask import json
+from flask import json, url_for
 
 
 class Model:
+    url = 'http://localhost:5000/'
     data = [{'title': 'Hello, world', 'desc': 'test post', 'key': 'Hello, world'}]
     posts = {
         'Hello_world': {
             'title': 'Hello_world',
-            'post': """
-                This is the post!!!!
-                - Chicken
-                - Beef
-            """
-        }
+            'post': url + 'static/mdx/Hello_world.mdx'}
     }
 
     def get_posts(self):
