@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "mdx.macro": "^0.2.8",
     "ramda": "^0.26.1",
     "react": "next",
     "react-dom": "next",

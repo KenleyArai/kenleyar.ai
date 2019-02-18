@@ -12,6 +12,7 @@ export default class App extends Component {
       <Router>
         <AppContainer>
           {/* Adding the navigation menu */}
+          {/* Location is needed so we know what page we are on */}
           <Route
             render={({ location }) => (
               <Navigation links={pages} location={location.pathname} />

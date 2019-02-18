@@ -1,12 +1,23 @@
 import Loading from 'components/Loading';
-import React, { useEffect, useState } from 'react';
+import React, { Component } from 'react';
 
 const addGETCall = (WrappedComponent, url) => {
-  const GET = () => {
-    const [is_loaded, setIsLoaded] = useState(null);
-    const [data, setData] = useState(null);
+  return class extends Component {
+    constructor(props) {
+      super(props);
+      this.state = {
+        is_loaded: null,
+        data: null,
+      };
 
-    const get = () => {
+      this.get = this.get.bind(this);
+    }
+
+    componentDidMount() {
+      this.get();
+    }
+
+    get() {
       fetch(url)
         .then(response => {
           if (!response.ok) {
@@ -15,26 +26,30 @@ const addGETCall = (WrappedComponent, url) => {
           return response;
         })
         .then(response => response.json())
-        .then(json => setData(JSON.parse(json)))
-        .then(() => setIsLoaded(true))
-        .catch(error => setIsLoaded(false) || setData(error)); // Hack to set error data
-    };
+        .then(json =>
+          this.setState({ is_loaded: true, data: JSON.parse(json) })
+        )
+        .catch(error =>
+          this.setState({ is_loaded: false, data: JSON.parse(error) })
+        );
+    }
 
-    useEffect(() => get(), []);
+    render() {
+      const { is_loaded, data } = this.state;
+      const { ...passThrough } = this.props;
 
-    if (is_loaded === null) {
-      // We haven't finished attempting yet
-      return <Loading />;
-    } else if (is_loaded === false) {
-      // We failed loading
-      return <Loading failed={true} data={data} />;
-    } else {
-      // We loaded, so loaded the WrappedComponent
-      return <WrappedComponent data={data} />;
+      if (is_loaded === null) {
+        // We haven't finished attempting yet
+        return <Loading />;
+      } else if (is_loaded === false) {
+        // We failed loading
+        return <Loading failed={true} data={data} />;
+      } else {
+        // We loaded, so loaded the WrappedComponent
+        return <WrappedComponent data={data} {...passThrough} />;
+      }
     }
   };
-
-  return GET;
 };
 
 export default addGETCall;
