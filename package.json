@@ -23,6 +23,8 @@
     "uuid": "^3.1.0"
   },
   "scripts": {
+    "docz:dev": "NODE_PATH=src:src/pages:src/containers:src/images:src/data:src/styled docz dev",
+    "docz:build": "NODE_PATH=src:src/pages:src/containers:src/images:src/data:src/styled docz build",
     "start": "NODE_PATH=src:src/pages:src/containers:src/images:src/data:src/styled react-scripts start",
     "build": "NODE_PATH=src:src/pages:src/containers:src/images:src/data:src/styled react-scripts build",
     "test": "react-scripts test --env=jsdom",
@@ -30,6 +32,8 @@
   },
   "devDependencies": {
     "autoprefixer": "^7.1.5",
+    "docz": "latest",
+    "docz-theme-default": "latest",
     "eslint-plugin-prettier": "^2.6.0",
     "faker": "^4.1.0",
     "file-loader": "^2.0.0",
@@ -41,5 +45,8 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "resolutions": {
+    "ansi-styles": "^3.2.0"
+  }
 }
