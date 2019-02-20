@@ -1,13 +1,12 @@
 import React from 'react';
+import CardContents from 'components/CardContents';
+import ListCardContainer from 'components/styled/ListCardContainer';
 
 const ListCard = ({ title, desc }) => {
   return (
-    <React.Fragment>
-      <li>
-        <h2>{title}</h2>
-        <p>{desc}</p>
-      </li>
-    </React.Fragment>
+    <ListCardContainer>
+      <CardContents title={title} desc={desc} />
+    </ListCardContainer>
   );
 };
 

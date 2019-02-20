@@ -1,11 +1,12 @@
 import React from 'react';
 import ListCard from 'components/ListCard';
+import DeckContainer from 'components/styled/DeckContainer';
 
 const Deck = ({ posts }) => {
   return (
-    <ul className="deck">
+    <DeckContainer>
       {posts.map(post => <ListCard key={posts.key} {...post} />)}
-    </ul>
+    </DeckContainer>
   );
 };
 
