@@ -1,5 +1,4 @@
 import React from 'react';
-import { useSpring, animated } from 'react-spring';
 import DoneLoader from 'components/styled/DoneLoader';
 import StillLoader from 'components/styled/StillLoader';
 import FailedLoader from 'components/styled/FailedLoader';
