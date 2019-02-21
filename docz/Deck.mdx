@@ -1,21 +1,9 @@
+---
+name: Deck
+---
+
+import { Playground, PropsTable } from 'docz';
 import Deck from 'components/Deck';
-const posts = [
-  {
-    key: 'A',
-    title: 'Hello',
-    desc: 'Hello, world',
-  },
-  {
-    key: 'B',
-    title: 'This is what a title would look like',
-    desc: 'some interesting text',
-  },
-  {
-    key: 'C',
-    title: 'Wow a third post!',
-    desc: 'some not so interesting text',
-  },
-];
 
 # Deck
 
@@ -49,4 +37,30 @@ const posts = [
 <Deck posts={posts} />
 ```
 
-<Deck posts={posts} />
+<Playground>
+  {
+    () => {
+      const posts = [
+                    {
+                      key: 'A',
+                      title: 'Hello',
+                      desc: 'Hello, world',
+                    },
+                    {
+                      key: 'B',
+                      title: 'This is what a title would look like',
+                      desc: 'some interesting text',
+                    },
+                    {
+                      key: 'C',
+                      title: 'Wow a third post!',
+                      desc: 'some not so interesting text',
+                    },
+                  ];
+
+      return <Deck posts={posts} />
+    }
+
+}
+
+</Playground>
