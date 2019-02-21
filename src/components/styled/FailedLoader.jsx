@@ -1,5 +1,5 @@
 import React from 'react';
 
-const DoneLoader = () => <p>Failed Loading!</p>;
+const FailedLoader = () => <p>Failed Loading!</p>;
 
-export default DoneLoader;
+export default FailedLoader;
