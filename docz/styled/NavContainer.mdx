@@ -1,29 +1,48 @@
+---
+name: NavContainer
+---
+
+import { Playground, PropsTable } from 'docz';
 import NavContainer from 'components/styled/NavContainer';
-const Comp = () => <div>{'dummy component'}</div>;
 
 # NavContainer
 
-Simple styled container.
+Simple styled container
+
+## Properties
+
+<PropsTable of={NavContainer} />
 
 ## Example
 
-## With just text
-
 ```
 <NavContainer>SomeText</NavContainer>
 ```
 
-<NavContainer>SomeText</NavContainer>
-
-## With component
+<Playground>
+  <NavContainer>SomeText</NavContainer>
+</Playground>
 
 ```
-const Comp = () => <div>{'dummy component'}</div>;
-<NavContainer>
-    <Comp />
-</NavContainer>
-```
+const Comp = () => <h1>Some Comp</h1>;
+
+...
 
 <NavContainer>
   <Comp />
 </NavContainer>
+```
+
+<Playground>
+  {() => {
+    const Comp = () => <h1>Some Comp</h1>;
+
+    return (
+      <NavContainer>
+        <Comp />
+      </NavContainer>
+    );
+
+}}
+
+</Playground>
