@@ -1,3 +1,8 @@
+---
+name: Loading
+---
+
+import { Playground } from 'docz';
 import Loading from 'components/Loading';
 
 # Loading
@@ -16,7 +21,9 @@ import Loading from 'components/Loading';
 <Loading />
 ```
 
-<Loading />
+<Playground>
+  <Loading />
+</Playground>
 
 ## Failed to load state
 
@@ -24,7 +31,9 @@ import Loading from 'components/Loading';
 <Loading failed={true} data={'Error while loading'} />
 ```
 
-<Loading failed={true} data={'Error while loading'} />
+<Playground>
+  <Loading failed={true} data={'Error while loading'} />
+</Playground>
 
 ## Sucessfully loaded
 
@@ -34,4 +43,6 @@ import Loading from 'components/Loading';
 <Loading failed={false} data={'Loaded!'} />
 ```
 
-<Loading failed={false} data={'Loaded!'} />
+<Playground>
+  <Loading failed={false} data={'Loaded!'} />
+</Playground>
