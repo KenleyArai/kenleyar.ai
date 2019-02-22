@@ -1,14 +1,16 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useSpring, animated } from 'react-spring';
 
 const StillLoader = () => {
-  const [toggle, setToggle] = useState(0);
-
   const props = useSpring({
     config: { mass: 2, tension: 200, friction: 50 },
-    to: { opacity: toggle === 1 ? 0.1 : 0.99 },
-    from: { opacity: toggle === 1 ? 0.99 : 0.1 },
-    onRest: () => setToggle(toggle === 1 ? 0 : 1),
+    from: { opacity: 1 },
+    to: async next => {
+      while (1) {
+        await next({ opacity: 0 });
+        await next({ opacity: 1 });
+      }
+    },
   });
 
   return (
