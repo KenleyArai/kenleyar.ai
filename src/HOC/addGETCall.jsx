@@ -29,10 +29,8 @@ const addGETCall = curry((WrappedComponent, url) => {
         .then(response => response.json())
         .then(json =>
           this.setState({ is_loaded: true, data: JSON.parse(json) })
-        );
-      //.catch(error =>
-      //  this.setState({ is_loaded: false, data: JSON.parse(error) })
-      //);
+        )
+        .catch(error => this.setState({ is_loaded: false, data: error }));
     }
 
     render() {

@@ -1,5 +1,5 @@
 import React from 'react';
 
-const FailedLoader = () => <p>Failed Loading!</p>;
+const FailedLoader = ({ data }) => <p>{data.toString()}</p>;
 
 export default FailedLoader;
