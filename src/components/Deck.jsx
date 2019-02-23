@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 const Deck = ({ posts }) => {
   return (
     <DeckContainer>
-      {posts.map(post => <ListCard key={posts.key} {...post} />)}
+      {posts.map(post => <ListCard key={post.toString()} {...post} />)}
     </DeckContainer>
   );
 };
