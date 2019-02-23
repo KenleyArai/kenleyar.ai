@@ -1,7 +1,10 @@
+import React from 'react';
 import styled from 'styled-components';
+import addSlideIn from 'HOC/addSlideIn';
 
-export const ListCardContainer = styled.li`
+export const StyledListCardContainer = styled.li`
   background-color: pink;
 `;
+const ListCardContainer = addSlideIn(StyledListCardContainer);
 
 export default ListCardContainer;
