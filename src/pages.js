@@ -5,6 +5,7 @@ const HomePage = lazy(() => import('pages/Home'));
 const AboutPage = lazy(() => import('pages/About'));
 const ProjectsPage = lazy(() => import('pages/Projects'));
 const GalleryPage = lazy(() => import('pages/Gallery'));
+const PostsPage = lazy(() => import('pages/Posts'));
 
 const pages = [
   {
@@ -26,10 +27,17 @@ const pages = [
     key: uuidv1(),
   },
   {
-    path: '/Gallery',
+    path: '/gallery',
     component: GalleryPage,
     text: 'Gallery',
     key: uuidv1(),
+  },
+  {
+    path: '/posts/:post',
+    component: PostsPage,
+    text: 'Posts',
+    key: uuidv1(),
+    hide: true,
   },
 ];
 

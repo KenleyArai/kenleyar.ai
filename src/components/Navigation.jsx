@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const Navigation = ({ links }) => {
   return (
     <NavContainer>
-      {links.map(link => {
+      {links.filter(x => !x.hide).map(link => {
         return (
           <Link id={link.path} key={link.key} to={link.path}>
             {link.text}
