@@ -24,7 +24,9 @@ Simple styled container
 </Playground>
 
 ```
-const Comp = () => <h1>Some Comp</h1>;
+const Comp = () => <p>Some Comp</p>;
+const Comp2 = () => <p>Some Comp2</p>;
+const Comp3 = () => <p>Some Comp3</p>;
 
 ...
 
@@ -35,11 +37,15 @@ const Comp = () => <h1>Some Comp</h1>;
 
 <Playground>
   {() => {
-    const Comp = () => <h1>Some Comp</h1>;
+    const Comp = () => <p>Some Comp</p>;
+    const Comp2 = () => <p>Some Comp2</p>;
+    const Comp3 = () => <p>Some Comp3</p>;
 
     return (
       <NavContainer>
         <Comp />
+        <Comp2 />
+        <Comp3 />
       </NavContainer>
     );
 
