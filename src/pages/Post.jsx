@@ -1,4 +1,3 @@
-import React from 'react';
 import MDPostGETCall from 'components/posts/MDPostGETCall';
 
 // Example useage:
