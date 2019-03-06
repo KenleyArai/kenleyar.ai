@@ -27,7 +27,7 @@
     "docz:build": "NODE_PATH=src:src/hooks:src/pages:src/containers:src/images:src/data:src/styled docz build",
     "start": "NODE_PATH=src:src/hooks:src/pages:src/containers:src/images:src/data:src/styled react-scripts start",
     "build": "NODE_PATH=src:src/hooks:src/pages:src/containers:src/images:src/data:src/styled react-scripts build",
-    "test": "NODE_PATH=src:src/hooks:src/pages:src/containers:src/images:src/data:src/styled jest",
+    "test": "NODE_PATH=src:src/hooks:src/pages:src/containers:src/images:src/data:src/styled CI=true jest",
     "eject": "react-scripts eject"
   },
   "devDependencies": {
