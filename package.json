@@ -34,8 +34,6 @@
     "@babel/preset-env": "^7.3.4",
     "@babel/preset-react": "^7.0.0",
     "autoprefixer": "^7.1.5",
-    "cypress": "^3.1.5",
-    "cypress-react-unit-test": "^2.3.2",
     "docz": "latest",
     "docz-theme-default": "latest",
     "eslint-plugin-prettier": "^2.6.0",
