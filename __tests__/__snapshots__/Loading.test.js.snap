@@ -1,0 +1,103 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Loading 1`] = `
+Array [
+  <img
+    src="test-file-stub"
+    style={
+      Object {
+        "opacity": "0.8414709848078965",
+        "transform": "translate3d(0, 0px, 0)",
+      }
+    }
+  />,
+  <img
+    src="test-file-stub"
+    style={
+      Object {
+        "opacity": "0.8414709848078964",
+        "transform": "translate3d(0, 12px, 0)",
+      }
+    }
+  />,
+  <img
+    src="test-file-stub"
+    style={
+      Object {
+        "opacity": "0.8414709848078963",
+        "transform": "translate3d(0, 7.34788079488412e-15px, 0)",
+      }
+    }
+  />,
+  <img
+    src="test-file-stub"
+    style={
+      Object {
+        "opacity": "0.8414709848078962",
+        "transform": "translate3d(0, -12px, 0)",
+      }
+    }
+  />,
+  <img
+    src="test-file-stub"
+    style={
+      Object {
+        "opacity": "0.841470984807896",
+        "transform": "translate3d(0, -1.469576158976824e-14px, 0)",
+      }
+    }
+  />,
+]
+`;
+
+exports[`Loading 2`] = `
+Array [
+  <img
+    src="test-file-stub"
+    style={
+      Object {
+        "opacity": "0.8414709848078965",
+        "transform": "translate3d(0, 0px, 0)",
+      }
+    }
+  />,
+  <img
+    src="test-file-stub"
+    style={
+      Object {
+        "opacity": "0.8414709848078964",
+        "transform": "translate3d(0, 12px, 0)",
+      }
+    }
+  />,
+  <img
+    src="test-file-stub"
+    style={
+      Object {
+        "opacity": "0.8414709848078963",
+        "transform": "translate3d(0, 7.34788079488412e-15px, 0)",
+      }
+    }
+  />,
+  <img
+    src="test-file-stub"
+    style={
+      Object {
+        "opacity": "0.8414709848078962",
+        "transform": "translate3d(0, -12px, 0)",
+      }
+    }
+  />,
+  <img
+    src="test-file-stub"
+    style={
+      Object {
+        "opacity": "0.841470984807896",
+        "transform": "translate3d(0, -1.469576158976824e-14px, 0)",
+      }
+    }
+  />,
+]
+`;
+
+exports[`Loading 3`] = `"Failed to load"`;

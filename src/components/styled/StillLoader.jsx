@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSpring, animated } from 'react-spring';
-import placeholder from '../../images/placeholder.png';
+import placeholder from 'images/placeholder.png';
 import { range } from 'ramda';
 
 const items = range(0, 5);
