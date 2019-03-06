@@ -1,14 +1,13 @@
 language: node_js
 env:
   - NODE_ENV: src:src/hooks:src/pages:src/containers:src/images:src/data:src/styled
-  - CI: true
 node_js:
   - 'stable'
 install:
   - npm install
 script:
-  - npm run build
-  - npm test
+  - CI=true npm run build
+  - CI=true npm test
 cache:
   directories:
     - node_modules
