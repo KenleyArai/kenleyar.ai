@@ -3,7 +3,7 @@
 exports[`Loading 1`] = `
 Array [
   <img
-    src="test-file-stub"
+    src="placeholder.png"
     style={
       Object {
         "opacity": "0.8414709848078965",
@@ -12,7 +12,7 @@ Array [
     }
   />,
   <img
-    src="test-file-stub"
+    src="placeholder.png"
     style={
       Object {
         "opacity": "0.8414709848078964",
@@ -21,7 +21,7 @@ Array [
     }
   />,
   <img
-    src="test-file-stub"
+    src="placeholder.png"
     style={
       Object {
         "opacity": "0.8414709848078963",
@@ -30,7 +30,7 @@ Array [
     }
   />,
   <img
-    src="test-file-stub"
+    src="placeholder.png"
     style={
       Object {
         "opacity": "0.8414709848078962",
@@ -39,7 +39,7 @@ Array [
     }
   />,
   <img
-    src="test-file-stub"
+    src="placeholder.png"
     style={
       Object {
         "opacity": "0.841470984807896",
@@ -53,7 +53,7 @@ Array [
 exports[`Loading 2`] = `
 Array [
   <img
-    src="test-file-stub"
+    src="placeholder.png"
     style={
       Object {
         "opacity": "0.8414709848078965",
@@ -62,7 +62,7 @@ Array [
     }
   />,
   <img
-    src="test-file-stub"
+    src="placeholder.png"
     style={
       Object {
         "opacity": "0.8414709848078964",
@@ -71,7 +71,7 @@ Array [
     }
   />,
   <img
-    src="test-file-stub"
+    src="placeholder.png"
     style={
       Object {
         "opacity": "0.8414709848078963",
@@ -80,7 +80,7 @@ Array [
     }
   />,
   <img
-    src="test-file-stub"
+    src="placeholder.png"
     style={
       Object {
         "opacity": "0.8414709848078962",
@@ -89,7 +89,7 @@ Array [
     }
   />,
   <img
-    src="test-file-stub"
+    src="placeholder.png"
     style={
       Object {
         "opacity": "0.841470984807896",
