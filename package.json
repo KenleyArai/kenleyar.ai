@@ -5,7 +5,6 @@
   "homepage": "https://kenleyar.ai",
   "dependencies": {
     "jest-dom": "^3.1.2",
-    "mdx.macro": "^0.2.8",
     "ramda": "^0.26.1",
     "react": "next",
     "react-dom": "next",
